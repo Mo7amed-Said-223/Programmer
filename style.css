@@ -1,0 +1,371 @@
+:root {
+    --mainColor: #ffc60a;
+    --darkColor: #cc9f0a;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Arial Black", "Arial";
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--mainColor);
+    border-bottom: 5px solid #fff;
+    height: 100px;
+}
+
+nav .logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.cover {
+    width: 100%;
+    height: 700px;
+    position: relative;
+    margin-bottom: 15vh;
+}
+
+.cover img {
+    width: 100%;
+    height: 600px;
+}
+
+.cover p {
+    position: absolute;
+    margin: 0;
+    color: #fff;
+
+}
+
+@media (min-width : 1400px) {
+    nav .logo {
+        font-size: 4rem;
+    }
+
+    .cover p:nth-of-type(1) {
+        top: 90px;
+        left: 12vw;
+        font-size: 13vw;
+    }
+
+    .cover p:nth-of-type(2) {
+        top: 350px;
+        left: 5vw;
+        font-size: 10vw;
+    }
+
+    .cover p:nth-of-type(3) {
+        top: 570px;
+        left: 40vw;
+        font-size: 5.5vw;
+    }
+}
+
+@media (min-width : 1200px) and (max-width:1399px) {
+    nav .logo {
+        font-size: 3.5rem;
+    }
+
+    .cover p:nth-of-type(1) {
+        top: 100px;
+        left: 12vw;
+        font-size: 13vw;
+    }
+
+    .cover p:nth-of-type(2) {
+        top: 350px;
+        left: 5vw;
+        font-size: 10vw;
+    }
+
+    .cover p:nth-of-type(3) {
+        top: 600px;
+        left: 35vw;
+        font-size: 6vw;
+    }
+}
+
+@media (min-width : 768px) and (max-width:1199px) {
+    nav .logo {
+        font-size: 3rem;
+    }
+
+    .cover p:nth-of-type(1) {
+        top: 180px;
+        left: 10vw;
+        font-size: 13vw;
+    }
+
+    .cover p:nth-of-type(2) {
+        top: 400px;
+        left: 5vw;
+        font-size: 10vw;
+    }
+
+    .cover p:nth-of-type(3) {
+        top: 600px;
+        left: 35vw;
+        font-size: 6vw;
+    }
+}
+
+@media (min-width:480px) and (max-width : 767px) {
+    nav .logo {
+        font-size: 2.5rem;
+    }
+
+    .cover p:nth-of-type(1) {
+        top: 180px;
+        left: 10vw;
+        font-size: 20vw;
+    }
+
+    .cover p:nth-of-type(2) {
+        top: 400px;
+        left: 5vw;
+        font-size: 15vw;
+    }
+
+    .cover p:nth-of-type(3) {
+        top: 620px;
+        left: 32vw;
+        font-size: 7vw;
+    }
+}
+
+@media (max-width : 479px) {
+    nav .logo {
+        font-size: 2rem;
+    }
+
+    .cover p:nth-of-type(1) {
+        top: 300px;
+        left: 10vw;
+        font-size: 20vw;
+    }
+
+    .cover p:nth-of-type(2) {
+        top: 400px;
+        left: 5vw;
+        font-size: 15vw;
+    }
+
+    .cover p:nth-of-type(3) {
+        top: 625px;
+        left: 30vw;
+        font-size: 7vw;
+    }
+}
+
+.typed-cursor {
+    display: none;
+}
+
+.contant {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 15vh 0;
+}
+
+.contant h1 {
+    color: var(--mainColor);
+    font-size: 10vw;
+}
+
+.search {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: var(--mainColor);
+    border-radius: 60px;
+    transition: 0.5s;
+    box-shadow: 0 0 0 5px var(--darkColor);
+    overflow: hidden;
+
+}
+
+.search.active {
+    width: 75%;
+}
+
+.search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: var(--mainColor);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.search .icon::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    transform: translate(-4px, -4px);
+}
+
+.search .icon::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 12px;
+    background-color: #fff;
+    transform: translate(6px, 6px) rotate(315deg);
+}
+
+.search .input {
+    position: relative;
+    width: 75%;
+    background-color: #000;
+    height: 60px;
+    left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search .input input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 3vh;
+    background-color: var(--mainColor);
+    color: #fff;
+}
+
+.search .input input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.search .clear {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search .clear::before,
+.search .clear::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: rgba(255, 255, 255);
+    transform: rotate(45deg);
+}
+
+.search .clear::after {
+    transform: rotate(315deg);
+}
+
+.autoCom {
+    background-color: var(--mainColor);
+    width: 70%;
+    color: #fff;
+    font-size: 2.5vh;
+    padding: 15px 0px;
+    overflow: hidden;
+    display: none;
+}
+
+.autoCom li {
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.autoCom li:hover {
+    background-color: var(--darkColor);
+}
+
+ul {
+    padding: 0;
+}
+
+ul li {
+    display: inline-block;
+    margin: 0 10px;
+    color: var(--mainColor);
+    font-size: 3vw;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+ul li:hover,
+ul li.active {
+    color: var(--darkColor);
+}
+
+ul span {
+    width: 100%;
+    height: 3px;
+    background-color: #eee;
+    display: block;
+    margin-top: 5px;
+    position: relative;
+}
+
+ul span span {
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    background-color: var(--darkColor);
+    left: 0;
+    top: -5px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+img {
+    width: 90%;
+    height: 100%;
+}
+
+a button {
+    padding: 2vh 10vh;
+    margin: 1vh;
+    background-color: var(--mainColor);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a button:hover {
+    background-color: var(--darkColor);
+}
