@@ -44,6 +44,17 @@ let data = [
             java: "https://drive.google.com/file/d/1o0HHqsLuZ_O8PDzUejuqqYmZKeg-Vjeo/view?usp=sharing",
         },
     },
+    {
+        section: "Built-In Function",
+        title: "#2 - String | toLower()",
+        num: 5,
+        link: "https://youtu.be/PtozbZ265S4",
+        code: {
+            js: "https://drive.google.com/file/d/10qQRPaP8l3m6VOZ7zT5xXwhRX9roovsp/view?usp=sharing",
+            php: "https://drive.google.com/file/d/18n8MTTEGLdbf0hWedLQWYnHciU-ZtQ4p/view?usp=sharing",
+            java: "https://drive.google.com/file/d/1x3QQOrima-gVVjmYfAsOMXlQNFDE3eQO/view?usp=sharing",
+        },
+    },
     // {
     //     section: "Problem Solving",
     //     title: "",
